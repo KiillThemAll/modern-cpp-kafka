@@ -629,10 +629,10 @@ KafkaClient::configInterceptorOnNew(rd_kafka_t* rk, const rd_kafka_conf_t* /*con
         return result;
     }
 
-    if (auto result = rd_kafka_interceptor_add_on_broker_state_change(rk, "on_broker_state_change", KafkaClient::interceptorOnBrokerStateChange, opaque))
+    /*if (auto result = rd_kafka_interceptor_add_on_broker_state_change(rk, "on_broker_state_change", KafkaClient::interceptorOnBrokerStateChange, opaque))
     {
         return result;
-    }
+    }*/
 
     return RD_KAFKA_RESP_ERR_NO_ERROR;
 }
